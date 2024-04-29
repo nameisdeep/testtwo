@@ -3,14 +3,12 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-with open('gasleakage.pkl', 'rb') as f:
-    model = pickle.load(f)
+
 
 
 @app.get("/")
 async def read_root():
-    return JSONResponse(content={"Hello": "World"})
-
+    return {"Hello": "World"}
 
 
 
